@@ -1,0 +1,20 @@
+.icon {
+  color: #666;
+}
+
+.header-item {
+  color: #666;
+  text-decoration: none;
+  margin:5px;
+  align-self: baseline;
+}
+a {
+  font-size: 20px;
+}
+a:active, a:hover {
+  color:black;
+}
+
+div {
+  padding-bottom: 0;
+}
