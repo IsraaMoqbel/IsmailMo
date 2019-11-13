@@ -5,6 +5,14 @@ module.exports = {
     author: `@IsraaMoqbel`,
   },
   plugins: [
+    // {
+    //   resolve: "gatsby-source-graphql",
+    //   options: {
+    //     typeName: "MYAPI",
+    //     fieldName: "works",
+    //     url: "https://api-euwest.graphcms.com/v1/ck2vojr6f2q2501eofa05ajun/master",
+    //   },
+    // },
     {
       resolve: "gatsby-source-graphql",
       options: {
