@@ -5,20 +5,13 @@ module.exports = {
     author: `@IsraaMoqbel`,
   },
   plugins: [
-    // {
-    //   resolve: "gatsby-source-graphql",
-    //   options: {
-    //     typeName: "MYAPI",
-    //     fieldName: "works",
-    //     url: "https://api-euwest.graphcms.com/v1/ck2vojr6f2q2501eofa05ajun/master",
-    //   },
-    // },
     {
-      resolve: "gatsby-source-graphql",
+      resolve: 'gatsby-source-graphql',
       options: {
-        typeName: "RMAPI",
-        fieldName: "rickAndMorty",
-        url: "https://rickandmortyapi-gql.now.sh/",
+        typeName: 'MYAPI',
+        fieldName: 'ourQuery',
+        url:
+          'https://api-euwest.graphcms.com/v1/ck2vojr6f2q2501eofa05ajun/master',
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -41,7 +34,7 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      }, 
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

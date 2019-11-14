@@ -45,7 +45,7 @@ class MainSection extends React.Component {
             >
               أهلًا بك في مدونتي
             </p>
-            <h1 style={{ font: "3rem", letterSpacing: "2.3px" }}>
+            <h1 style={{ fontSize: "3rem", letterSpacing: "2.3px" }}>
               إسماعيل محمد مقبل
             </h1>
             <h1 style={{ fontFamily: "sans-serif", fontWeight:"lighter" }}>
