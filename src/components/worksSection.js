@@ -1,13 +1,13 @@
 import React from "react"
-// import { graphql } from "react-apollo"
-// import gql from "graphql-tag"
+import { graphql } from "react-apollo"
+import gql from "graphql-tag"
 // import GraphIMG from "graphcms-image"
 import "./workSection.css"
 import ShowMoreButton from "./showMoreButton"
 
 class WorksSection extends React.Component {
   render() {
-    // console.log(this.props)
+    console.log(this.props,'pppppp')
     // const works = this.props.data.workses
     // const work = works && works[0]
     // console.log(work && work.pic)
@@ -107,29 +107,29 @@ class WorksSection extends React.Component {
     )
   }
 }
-// export const works = gql`
-//   query {
-//     workses {
-//       status
-//       updatedAt
-//       createdAt
-//       id
-//       link
-//       pic {
-//         status
-//         updatedAt
-//         createdAt
-//         id
-//         handle
-//         fileName
-//         height
-//         width
-//         size
-//         mimeType
-//       }
-//     }
-//   }
-// `
+export const works = gql`
+  query {
+    workses {
+      status
+      updatedAt
+      createdAt
+      id
+      link
+      pic {
+        status
+        updatedAt
+        createdAt
+        id
+        handle
+        fileName
+        height
+        width
+        size
+        mimeType
+      }
+    }
+  }
+`
 
-export default WorksSection
-// export default graphql(works)(WorksSection)
+// export default WorksSection
+export default graphql(works)(WorksSection)
