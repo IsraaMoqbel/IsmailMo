@@ -5,8 +5,22 @@ import './worksSection.css'
 import ShowMoreButton from './showMoreButton'
 
 class WorksSection extends React.Component {
+  state = {
+    showItems: 5,
+    works: [],
+  }
+  handleShowMore = () => {
+    this.setState({
+      showItems: this.state.showItems + 3,
+    })
+  }
+  componentDidUpdate(prevProp) {
+    this.props.data !== prevProp.data &&
+      this.setState({ works: this.props.data.workses })
+  }
+
   render() {
-    const works = this.props.data.workses
+    const { works, showItems } = this.state
     console.log(works, 'works')
     return (
       <div
@@ -43,13 +57,17 @@ class WorksSection extends React.Component {
             }}
           >
             <p
-              style={{ color: '#0072ff', fontSize: '3rem', fontWeight: 'bold' }}
+              style={{
+                color: '#0072ff',
+                fontSize: '3.5vw',
+                fontWeight: 'bold',
+              }}
             >
               أعمالي
             </p>
           </div>
           {works &&
-            works.map(work => {
+            works.slice(0, showItems).map(work => {
               return (
                 <a
                   key={work.id}
@@ -58,7 +76,7 @@ class WorksSection extends React.Component {
                   style={{
                     width: '30%',
                     height: '280px',
-                    backgroundColor: 'black',
+                    backgroundColor: 'rgb(16, 22, 48)',
                     margin: '10px',
                     display: 'flex',
                     justifyContent: 'center',
@@ -67,14 +85,15 @@ class WorksSection extends React.Component {
                 >
                   <img
                     src={work.pic.url}
-                    style={{ width: '200px', alignSelf: 'center' }}
+                    style={{ width: '50%', alignSelf: 'center' }}
                   />
                 </a>
               )
             })}
         </div>
-        <ShowMoreButton handleMore={() => console.log('xxx')} />
-
+        {works.length >= showItems && (
+          <ShowMoreButton handleMore={this.handleShowMore} />
+        )}
       </div>
     )
   }

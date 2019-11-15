@@ -2,11 +2,25 @@ import React from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import ShowMoreButton from './showMoreButton'
+import './blogSection.css'
 
 class BlogSection extends React.Component {
+  state = {
+    showItems: 5,
+    articles: [],
+  }
+  handleShowMore = () => {
+    this.setState({
+      showItems: this.state.showItems + 3,
+    })
+  }
+  componentDidUpdate(prevProp) {
+    this.props.data !== prevProp.data &&
+      this.setState({ articles: this.props.data.articleses })
+  }
   render() {
-    const articles = this.props.data.articleses
-    console.log(articles, 'articles')
+    const {articles, showItems} = this.state
+    // console.log(this.props.data.articleses, 'articles')
     return (
       <div
         style={{
@@ -42,13 +56,17 @@ class BlogSection extends React.Component {
             }}
           >
             <p
-              style={{ color: '#0072ff', fontSize: '3rem', fontWeight: 'bold' }}
+              style={{
+                color: '#0072ff',
+                fontSize: '3.5vw',
+                fontWeight: 'bold',
+              }}
             >
               المدونة
             </p>
           </div>
           {articles &&
-            articles.map((article, i) => {
+            articles.slice(0, showItems).map((article, i) => {
               return (
                 <a
                   key={article.id}
@@ -62,23 +80,31 @@ class BlogSection extends React.Component {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    textDecoration:'none'
+                    textDecoration: 'none',
                   }}
                 >
-                  <p>{article.title}</p>
-                  <img
-                    src={article.pic.url}
-                    style={{
-                      width: '200px',
-                      alignSelf: 'center',
-                      resizeMode: 'contain',
-                    }}
-                  />
+                  <div className="container">
+                    <div className="text">
+                      <p>{article.title}</p>
+                    </div>
+                    <img
+                      src={article.pic.url}
+                      style={{
+                        width: '100%',
+                        alignSelf: 'center',
+                        height: '-webkit-fill-available',
+                        verticalAlign: 'top',
+                        filter: 'brightness(50%)'
+                      }}
+                    />
+                  </div>
                 </a>
               )
             })}
         </div>
-        <ShowMoreButton handleMore={() => console.log('xxx')} />
+        {articles.length >= showItems && (
+          <ShowMoreButton handleMore={this.handleShowMore} />
+        )}
       </div>
     )
   }
