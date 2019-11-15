@@ -8,7 +8,6 @@ import 'slick-carousel/slick/slick-theme.css'
 
 class OpinionsSection extends React.Component {
   render() {
-    console.log(this.props.data.clientses)
     const clients = this.props.data.clientses
     const settings = {
       dots: true,
@@ -31,7 +30,7 @@ class OpinionsSection extends React.Component {
               return (
                 <div key={e.id}>
                   <div className="row">
-                    <div className="culomn" style={{width:"30%"}}>
+                    <div className="culomn" style={{ width: '30%' }}>
                       <div
                         style={{
                           // margin: '10px auto',

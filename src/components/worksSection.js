@@ -21,7 +21,6 @@ class WorksSection extends React.Component {
 
   render() {
     const { works, showItems } = this.state
-    console.log(works, 'works')
     return (
       <div
         style={{

@@ -19,8 +19,7 @@ class BlogSection extends React.Component {
       this.setState({ articles: this.props.data.articleses })
   }
   render() {
-    const {articles, showItems} = this.state
-    // console.log(this.props.data.articleses, 'articles')
+    const { articles, showItems } = this.state
     return (
       <div
         style={{
@@ -94,7 +93,7 @@ class BlogSection extends React.Component {
                         alignSelf: 'center',
                         height: '-webkit-fill-available',
                         verticalAlign: 'top',
-                        filter: 'brightness(50%)'
+                        filter: 'brightness(50%)',
                       }}
                     />
                   </div>
