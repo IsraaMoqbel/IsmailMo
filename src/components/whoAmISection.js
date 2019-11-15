@@ -34,7 +34,7 @@ class WhoAmISection extends React.Component {
               borderWidth: "5px",
               borderColor: "white",
               borderStyle: "solid",
-              padding: "120px",
+              padding: "6vw",
               margin: "25px",
             }}
           >
@@ -42,7 +42,7 @@ class WhoAmISection extends React.Component {
               style={{
                 color: "white",
                 width: "max-content",
-                fontSize: "3.5rem",
+                fontSize: "2.5vw",
               }}
             >
               من أنا؟
