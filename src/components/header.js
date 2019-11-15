@@ -106,7 +106,7 @@ const Header = ({ siteTitle }) => (
         </p>
         <p style={{ margin: 0 }}>
           <a
-            href="#broadcast"
+            href="#podcast"
             style={{
               color: `#666`,
               textDecoration: `none`,

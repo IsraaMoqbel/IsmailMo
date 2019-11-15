@@ -8,32 +8,40 @@ class PodcastSection extends React.Component {
     return (
       <div
         style={{
-          margin: `0 auto`,
-          height: '100vh',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'space-around',
+          margin:'20px'
         }}
-        id="broadcast"
+        id="podcast"
       >
         <div
           style={{
-            // width: '30%',
-            height: '280px',
-            margin: '0 auto',
             borderWidth: '1px',
             borderColor: '#DDD',
             borderStyle: 'solid',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            padding:'3vw',
+            margin:'10px',
+            height:'240px',
+            width:'30%'
           }}
         >
-          <p style={{ color: '#0072ff', fontSize: '3rem', fontWeight: 'bold' }}>
+          <p style={{ color: '#0072ff', fontSize: '3vw', fontWeight: 'bold' }}>
             بودكاست
           </p>
         </div>
-        <div>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexDirection:'column',
+            margin:'10px'
+          }}
+        >
           {podcasts &&
             podcasts.map(podcast => {
               return (
@@ -41,17 +49,8 @@ class PodcastSection extends React.Component {
                   key={podcast.id}
                   href={podcast.link}
                   target="_blank"
-                  style={{
-                    width: '70%',
-                    // height: '200px',
-                    backgroundColor: 'black',
-                    margin: '10px',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}
                 >
-                  <img src={podcast.pic.url} style={{ width: '100%', }} />
+                  <img src={podcast.pic.url} style={{ width:'100%' }} />
                 </a>
               )
             })}
