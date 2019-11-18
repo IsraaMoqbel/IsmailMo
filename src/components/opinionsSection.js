@@ -15,6 +15,7 @@ class OpinionsSection extends React.Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      fade: true,
     }
     return (
       <div
@@ -33,8 +34,6 @@ class OpinionsSection extends React.Component {
                     <div className="culomn" style={{ width: '30%' }}>
                       <div
                         style={{
-                          // margin: '10px auto',
-                          // width: '50%',
                           height: '280px',
                           borderWidth: '1px',
                           borderColor: '#DDD',
@@ -48,7 +47,7 @@ class OpinionsSection extends React.Component {
                         <p
                           style={{
                             color: '#0072ff',
-                            fontSize: '3.5vw',
+                            fontSize: '3vw',
                             fontWeight: 'bold',
                           }}
                         >
@@ -65,7 +64,7 @@ class OpinionsSection extends React.Component {
                       </div>
                     </div>
                     <div>
-                      <img src={e.pic.url} width="80%" />
+                      <img src={e.pic.url} width="60%" />
                     </div>
                   </div>
                 </div>

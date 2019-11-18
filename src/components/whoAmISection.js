@@ -13,6 +13,7 @@ class WhoAmISection extends React.Component {
           backgroundColor: `rgba(0,0,0,0)`,
           backgroundImage: `url(${Background})`,
           backgroundSize: `cover`,
+          backgroundAttachment:'fixed',
           display: "flex",
           flexDirection: "row-reverse",
           alignItems: "center",

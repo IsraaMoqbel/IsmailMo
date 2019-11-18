@@ -28,7 +28,7 @@ class PodcastSection extends React.Component {
             width: '30%',
           }}
         >
-          <p style={{ color: '#0072ff', fontSize: '3vw', fontWeight: 'bold' }}>
+          <p style={{ color: '#0072ff', fontSize: '2.5vw', fontWeight: 'bold' }}>
             بودكاست
           </p>
         </div>
@@ -39,13 +39,21 @@ class PodcastSection extends React.Component {
             alignItems: 'center',
             flexDirection: 'column',
             margin: '10px',
+            width:'70%'
           }}
         >
           {podcasts &&
             podcasts.map(podcast => {
               return (
-                <a key={podcast.id} href={podcast.link} target="_blank">
-                  <img src={podcast.pic.url} style={{ width: '100%' }} />
+                <a key={podcast.id} href={podcast.link} target="_blank" style={{width:'100%'}}>
+                  <iframe
+                    width="100%"
+                    height="166"
+                    scrolling="no"
+                    frameBorder="no"
+                    allow="autoplay"
+                    src={`https://w.soundcloud.com/player/?url=${podcast.link}`}
+                  ></iframe>
                 </a>
               )
             })}
