@@ -18,7 +18,7 @@ class ShowMoreButton extends React.Component {
           marginBottom: '10px'
         }}
         onClick={() => this.props.handleMore()}
-        className="button"
+        className="button box"
       >
         <p
           style={{

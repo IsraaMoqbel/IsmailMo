@@ -22,6 +22,9 @@ class OpinionsSection extends React.Component {
         style={{
           height: 'auto',
           marginBottom: '90px',
+          maxWidth:'100vw',
+          marginLeft:'50px',
+          marginRight:'50px'
         }}
         id="opinions"
       >
@@ -63,8 +66,8 @@ class OpinionsSection extends React.Component {
                         <p>{e.clientTitle}</p>
                       </div>
                     </div>
-                    <div>
-                      <img src={e.pic.url} width="60%" />
+                    <div style={{margin:'20px'}}>
+                      <img src={e.pic.url} width="100%" style={{objectFit:'contain', height:'500px'}} />
                     </div>
                   </div>
                 </div>

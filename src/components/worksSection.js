@@ -28,6 +28,7 @@ class WorksSection extends React.Component {
           height: 'auto',
           alignItems: 'center',
           paddingTop: '40px',
+          flexWrap:'wrap'
         }}
         id="works"
       >
@@ -54,6 +55,8 @@ class WorksSection extends React.Component {
               alignItems: 'center',
               justifyContent: 'center',
             }}
+            className="box"
+
           >
             <p
               style={{
@@ -81,6 +84,8 @@ class WorksSection extends React.Component {
                     justifyContent: 'center',
                     alignItems: 'center',
                   }}
+                  className="box"
+                  title={work.link || 'اضغط لمشاهدة هذا العمل'}
                 >
                   <img
                     src={work.pic.url}

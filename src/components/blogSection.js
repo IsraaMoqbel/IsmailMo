@@ -27,6 +27,7 @@ class BlogSection extends React.Component {
           height: 'auto',
           alignItems: 'center',
           paddingTop: '40px',
+          flexWrap:'wrap'
         }}
         id="blog"
       >
@@ -36,7 +37,7 @@ class BlogSection extends React.Component {
             display: 'flex',
             flexDirection: 'row-reverse',
             flexWrap: 'wrap',
-            height: '90%',
+            // height: '90%',
             justifyContent: 'center',
             position: 'relative',
           }}
@@ -81,10 +82,11 @@ class BlogSection extends React.Component {
                     alignItems: 'center',
                     textDecoration: 'none',
                   }}
+                  className="box"
                 >
                   <div className="container">
                     <div className="text">
-                      <p>{article.title}</p>
+                      <p className="article-paragraph">{article.title}</p>
                     </div>
                     <img
                       src={article.pic.url}

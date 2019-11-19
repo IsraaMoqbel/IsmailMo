@@ -11,4 +11,8 @@
   left: 16px;
   margin:5px;
   z-index: 100;
+  padding:10px;
+}
+.article-paragraph:hover {
+  opacity: 0.8;
 }
