@@ -35,8 +35,8 @@ const Header = ({ siteTitle }) => (
         }}
       >
         <p style={{ margin: 0 }}>
-          <a
-            href="#main"
+          <Link
+            to="#main"
             style={{
               color: `#666`,
               textDecoration: `none`,
@@ -44,7 +44,7 @@ const Header = ({ siteTitle }) => (
             }}
           >
             الرئيسية
-          </a>
+          </Link>
         </p>
       </div>
       <div
@@ -57,8 +57,8 @@ const Header = ({ siteTitle }) => (
         }}
       >
         <p style={{ margin: 0 }}>
-          <a
-            href="#whoAmI"
+          <Link
+            to="#whoAmI"
             style={{
               color: `#666`,
               textDecoration: `none`,
@@ -66,11 +66,11 @@ const Header = ({ siteTitle }) => (
             }}
           >
             من أنا
-          </a>
+          </Link>
         </p>
         <p style={{ margin: 0 }}>
-          <a
-            href="#works"
+          <Link
+            to="#works"
             style={{
               color: `#666`,
               textDecoration: `none`,
@@ -78,11 +78,11 @@ const Header = ({ siteTitle }) => (
             }}
           >
             أعمالي
-          </a>
+          </Link>
         </p>
         <p style={{ margin: 0 }}>
-          <a
-            href="#blog"
+          <Link
+            to="#blog"
             style={{
               color: `#666`,
               textDecoration: `none`,
@@ -90,11 +90,11 @@ const Header = ({ siteTitle }) => (
             }}
           >
             المدونة
-          </a>
+          </Link>
         </p>
         <p style={{ margin: 0 }}>
-          <a
-            href="#opinions"
+          <Link
+            to="#opinions"
             style={{
               color: `#666`,
               textDecoration: `none`,
@@ -102,11 +102,11 @@ const Header = ({ siteTitle }) => (
             }}
           >
             آراء العملاء
-          </a>
+          </Link>
         </p>
         <p style={{ margin: 0 }}>
-          <a
-            href="#podcast"
+          <Link
+            to="#podcast"
             style={{
               color: `#666`,
               textDecoration: `none`,
@@ -114,7 +114,7 @@ const Header = ({ siteTitle }) => (
             }}
           >
             بودكاست
-          </a>
+          </Link>
         </p>
         <div
           style={{
