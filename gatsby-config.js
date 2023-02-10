@@ -11,7 +11,7 @@ module.exports = {
         typeName: 'MYAPI',
         fieldName: 'ourQuery',
         url:
-          'https://api-euwest.graphcms.com/v1/ck2vojr6f2q2501eofa05ajun/master',
+          'https://api-ap-northeast-1.hygraph.com/v2/ck2vojr6f2q2501eofa05ajun/master',
       },
     },
     `gatsby-plugin-react-helmet`,

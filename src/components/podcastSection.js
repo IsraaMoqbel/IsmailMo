@@ -3,7 +3,7 @@ import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 class PodcastSection extends React.Component {
   render() {
-    const podcasts = this.props.data.podcasts
+    const podcasts = this.props.data ? this.props.data.podcasts : []
     return (
       <div
         style={{
@@ -71,7 +71,6 @@ export const podcasts = gql`
       pic {
         url
       }
-      status
     }
   }
 `

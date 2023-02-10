@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick-theme.css'
 
 class OpinionsSection extends React.Component {
   render() {
-    const clients = this.props.data.clientses
+    const clients = this.props.data ? this.props.data.clientses : []
     const settings = {
       dots: true,
       infinite: true,
@@ -85,7 +85,6 @@ export const opinions = gql`
       clientTitle
       name
       opinion
-      status
       pic {
         url
       }

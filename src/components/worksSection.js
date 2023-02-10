@@ -15,12 +15,16 @@ class WorksSection extends React.Component {
     })
   }
   componentDidUpdate(prevProp) {
-    this.props.data !== prevProp.data &&
-      this.setState({ works: this.props.data.workses })
+    if (this.props.data) {
+      this.props.data !== prevProp.data &&
+        this.setState({ works: this.props.data.workses })
+    }
+    console.log(this.props, prevProp, 'prevProp.data')
   }
 
   render() {
     const { works, showItems } = this.state
+    console.log(this.state, 'ssssssssss')
     return (
       <div
         style={{
@@ -104,9 +108,8 @@ class WorksSection extends React.Component {
 }
 
 export const works = gql`
-  query {
-    workses(orderBy: status_ASC) {
-      status
+  query getWork {
+    workses(orderBy: id_ASC) {
       link
       pic {
         url

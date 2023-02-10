@@ -15,8 +15,10 @@ class BlogSection extends React.Component {
     })
   }
   componentDidUpdate(prevProp) {
-    this.props.data !== prevProp.data &&
-      this.setState({ articles: this.props.data.articleses })
+    if (this.props.data) {
+      this.props.data !== prevProp.data &&
+        this.setState({ articles: this.props.data.articleses })
+    }
   }
   render() {
     const { articles, showItems } = this.state
@@ -70,7 +72,7 @@ class BlogSection extends React.Component {
               return (
                 <a
                   key={article.id}
-                  href={`/${article.id}`}
+                  href={`ismail-moqbel/${article.id}`}
                   target="_blank"
                   style={{
                     width: '30%',
@@ -115,7 +117,6 @@ export const articles = gql`
   query {
     articleses {
       id
-      status
       title
       contents
       createdAt
